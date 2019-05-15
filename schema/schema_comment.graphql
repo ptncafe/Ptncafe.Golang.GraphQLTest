@@ -1,0 +1,21 @@
+
+type CommentDto {
+  PostId: Int!
+  Id: ID!
+  Name: String!
+  Email: String!
+  Body: String!
+}
+
+type Query {
+  queryComment: [CommentDto!]!
+}
+
+input InputGetComment {
+  Id: Int!
+  PostId: Int!
+}
+
+type Mutation {
+  getComment(input: InputGetComment!): CommentDto!
+}
